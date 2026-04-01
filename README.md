@@ -2,6 +2,8 @@
 
 Evaluating the effect of London's staggered ULEZ expansion on NO₂ and NOₓ concentrations using **Random Forest weather normalization** and **partially pooled Synthetic Control Methods** (Ben-Michael et al., 2021).
 
+> 📄 Full thesis: [`docs/Thesis.pdf`](docs/Thesis.pdf)
+
 ## Research Question
 
 Did London's Ultra Low Emission Zone — implemented in three staggered phases (Central 2019, Inner 2021, Outer 2023) — cause a statistically significant reduction in roadside NO₂ and NOₓ concentrations, after removing the confounding effects of weather variability?
@@ -10,10 +12,36 @@ Did London's Ultra Low Emission Zone — implemented in three staggered phases (
 
 | Pollutant | Average Treatment Effect (ATT) | Percentage Change | p-value (Placebo) |
 |-----------|-------------------------------|-------------------|-------------------|
-| NO₂       | −0.054 (log scale)            | ≈ −5.4%           | < 0.05            |
-| NOₓ       | −0.064 (log scale)            | ≈ −6.4%           | < 0.05            |
+| NO₂       | −0.054 (log scale)            | ≈ −5.4%           | < 0.005           |
+| NOₓ       | −0.064 (log scale)            | ≈ −6.4%           | < 0.005           |
 
 Results are robust to spatial placebo tests, in-time placebo tests, and leave-one-out cross-validation.
+
+### Event Study: Treatment Effects Over Time
+
+<p align="center">
+  <img src="outputs/figures/fig1_event_study_no2.png" width="48%">
+  <img src="outputs/figures/fig1_event_study_nox.png" width="48%">
+</p>
+
+> Blue = pre-treatment period (−52 to 0 weeks); Red = post-treatment period (0 to 52 weeks). Shaded areas = 95% confidence intervals. The consistent negative shift after treatment onset indicates ULEZ-attributable reductions.
+
+### Spatial Placebo Tests (200 Permutations)
+
+<p align="center">
+  <img src="outputs/figures/fig4_placebo_no2.png" width="48%">
+  <img src="outputs/figures/fig4_placebo_nox.png" width="48%">
+</p>
+
+> Red lines = actual treatment effects. The observed ATTs fall far outside the placebo distribution, confirming that results are not driven by random spatial variation (p < 0.005 for both pollutants).
+
+### Leave-One-Out Cross-Validation
+
+<p align="center">
+  <img src="outputs/figures/fig5_loocv_no2.png" width="60%">
+</p>
+
+> All 18 site-exclusion estimates remain negative, demonstrating that no single monitoring site drives the aggregate result.
 
 ## Methodology
 
@@ -48,7 +76,7 @@ Staggered Adoption Synthetic Control (augsynth::multisynth)
         │
         ▼
 Robustness checks
-   ├── Spatial placebo tests (500 permutations)
+   ├── Spatial placebo tests (200 permutations)
    ├── In-time placebo tests
    └── Leave-one-out cross-validation
 ```
@@ -94,20 +122,17 @@ london-ulez-air-quality/
 │   ├── 06_robustness_checks.R        # Placebo tests + LOOCV
 │   └── utils/
 │       ├── fill_missing.R            # Kalman smoothing imputation
-│       ├── analyze_site.R            # Weather normalization core function
-│       └── plotting_helpers.R        # Visualization functions
+│       └── analyze_site.R            # Weather normalization core function
 │
 ├── data/
 │   ├── README.md                     # Data dictionary and download instructions
 │   └── site_metadata/
-│       └── london_valid_sites.csv
 │
 ├── outputs/
-│   ├── figures/
-│   └── tables/
+│   └── figures/                      # Key result visualizations
 │
 └── docs/
-    └── thesis_summary.md
+    └── Thesis.pdf                    # Full thesis document
 ```
 
 ## Reproducing the Analysis
@@ -146,7 +171,7 @@ You will also need a [CDS API key](https://cds.climate.copernicus.eu/api-how-to)
 - **Random Forest models** with OOB R² of 0.77–0.88, confirming strong weather-pollution relationships
 - **Weather normalization reduces SD by 29–67%**, effectively removing meteorological noise
 - **Optimal nu selection** using Ben-Michael et al. (2021) balance frontier heuristic
-- **500-permutation spatial placebo tests** confirm treatment effects are not driven by chance
+- **200-permutation spatial placebo tests** confirm treatment effects are not driven by chance
 
 ## References
 
