@@ -9,7 +9,6 @@
 .Rhistory
 .Rproj.user/
 *.Rproj
-.Rdata
 
 # === Python ===
 __pycache__/
@@ -20,11 +19,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# === Output files (reproducible, not tracked) ===
-outputs/figures/*.png
-outputs/figures/*.pdf
-outputs/tables/*.csv
-
-# === But DO track these config/metadata files ===
+# === But DO track these ===
 !data/site_metadata/*.csv
 !config/*.csv
