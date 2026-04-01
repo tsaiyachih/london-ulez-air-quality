@@ -1,0 +1,56 @@
+site_code,site_name,source,group,cohort,treatment_date,weather_source
+EN1,Enfield - Bush Hill Park,kcl,Treatment,Outer_2023,2023-08-29,london
+IS2,Islington - Holloway Road,kcl,Treatment,Inner_2021,2021-10-25,london
+CR5,Croydon - Norbury,kcl,Treatment,Outer_2023,2023-08-29,london
+RI1,Richmond Upon Thames - Castelnau,kcl,Treatment,Inner_2021,2021-10-25,london
+HV3,Havering - Romford,kcl,Treatment,Outer_2023,2023-08-29,london
+TH2,Tower Hamlets - Mile End Road,kcl,Treatment,Inner_2021,2021-10-25,london
+GN3,Greenwich - Westhorne Avenue,kcl,Treatment,Outer_2023,2023-08-29,london
+EA6,Ealing - Hanger Lane Gyratory,kcl,Treatment,Outer_2023,2023-08-29,london
+KC1,Kensington and Chelsea - North Ken,kcl,Treatment,Inner_2021,2021-10-25,london
+BT8,Brent - Ikea,kcl,Treatment,Inner_2021,2021-10-25,london
+MY1,Marylebone Road,kcl,Treatment,Central_2019,2019-04-08,london
+WM6,Westminster - Oxford Street,kcl,Treatment,Central_2019,2019-04-08,london
+EI1,Ealing - Western Avenue,kcl,Treatment,Outer_2023,2023-08-29,london
+LW4,Lewisham - Loampit Vale,kcl,Treatment,Inner_2021,2021-10-25,london
+SK6,Southwark - Elephant and Castle,kcl,Treatment,Central_2019,2019-04-08,london
+EA8,Ealing - Horn Lane,kcl,Treatment,Outer_2023,2023-08-29,london
+WM5,Westminster - Strand,kcl,Treatment,Central_2019,2019-04-08,london
+TH4,Tower Hamlets - Blackwall,kcl,Treatment,Inner_2021,2021-10-25,london
+MAN3,Manchester Piccadilly,aurn,Control,Control,NA,manchester
+MAHG,Manchester Sharston,aurn,Control,Control,NA,manchester
+LEED,Leeds Centre,aurn,Control,Control,NA,leeds
+LED6,Leeds Headingley Kerbside,aurn,Control,Control,NA,leeds
+LVP,Liverpool Speke,aurn,Control,Control,NA,liverpool
+NOTT,Nottingham Centre,aurn,Control,Control,NA,nottingham
+LEIR,Leicester A594 Roadside,aurn,Control,Control,NA,leicester
+LECU,Leicester University,aurn,Control,Control,NA,leicester
+DESA,Derby St Alkmund's Way,aurn,Control,Control,NA,derby
+CHS7,Chesterfield Loundsley Green,aurn,Control,Control,NA,chesterfield
+CHLG,Chesterfield Roadside,aurn,Control,Control,NA,chesterfield
+SOUT,Southampton Centre,aurn,Control,Control,NA,southampton
+BEL0,Belfast Centre,ni,Control,Control,NA,belfast
+BEL1,Belfast Stockman's Lane,ni,Control,Control,NA,belfast
+BEL5,Belfast Ormeau Road,ni,Control,Control,NA,belfast
+NWBV,Newry Trevor Hill,ni,Control,Control,NA,belfast
+REA1,Reading New Town,aurn,Control,Control,NA,reading
+REA5,Reading Oxford Road,aurn,Control,Control,NA,reading
+COBR,Coventry Binley Road,aurn,Control,Control,NA,coventry
+COAL,Coventry Allesley,aurn,Control,Control,NA,coventry
+PLYM,Plymouth Centre,aurn,Control,Control,NA,plymouth
+PLYR,Plymouth Tavistock Road,aurn,Control,Control,NA,plymouth
+CARD,Cardiff Centre,aurn,Control,Control,NA,cardiff
+CNPR,Cardiff Newport Road,aurn,Control,Control,NA,cardiff
+SWA1,Swansea Roadside,waqn,Control,Control,NA,swansea
+SWA9,Swansea Cwm Level Park,waqn,Control,Control,NA,swansea
+SWA11,Swansea Morfa Road,waqn,Control,Control,NA,swansea
+STKR,Stoke-on-Trent A50 Roadside,aurn,Control,Control,NA,stoke
+STOK,Stoke-on-Trent Centre,aurn,Control,Control,NA,stoke
+HUL2,Hull Freetown,aurn,Control,Control,NA,hull
+HULR,Hull Holderness Road,aurn,Control,Control,NA,hull
+NTN4,Northampton Spring Park,aurn,Control,Control,NA,northampton
+LUTR,Luton A505 Roadside,aurn,Control,Control,NA,luton
+BBRD,Bournemouth,aurn,Control,Control,NA,bournemouth
+SA33,Southall,aurn,Control,Control,NA,reading
+BE2,Belfast East,ni,Control,Control,NA,belfast
+TRAN,Tran,aurn,Control,Control,NA,bournemouth
